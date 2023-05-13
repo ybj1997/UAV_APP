@@ -14,6 +14,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './component/Home'
 import MapScreen from './component/Map'
 import VideoScreen from './component/Video'
+import TrackerScreen from './component/DroneTracker'
 
 const Stack = createNativeStackNavigator();
 
@@ -30,10 +31,10 @@ function App() {
             headerTitleAlign: 'center'
           }} />
         <Stack.Screen
-          name="Map"
-          component={MapScreen}
+          name="Tracker"
+          component={TrackerScreen}
           options={{
-            title: '地图',
+            title: '详情',
             headerTitleAlign: 'center'
           }} />
           <Stack.Screen

@@ -11,37 +11,49 @@ export default function Map() {
   }, []);
 
   return (
-    <View style={{ backgroundColor: 'white' }}>
+    <View style={styles.map}>
       <ImageBackground
         source={require('../../images/map.jpg')}
         style={styles.bgcimage}
         resizeMode='contain'
       >
-        <Svg height={height} width={width} style={styles.path}>
+        <Svg style={styles.path}>
           <Path
-            d="M0 0 L98 65 L70 25 L16 77 L11 30 L0 4 L90 50 L50 10 L11 22 L77 95 L20 25"
+            d="M0 0 L98 5 L55 55"
             fill="none"
             stroke="red"
-            translateX={width / 2}
-            translateY={height / 2}
           />
-
         </Svg>
       </ImageBackground>
+      <View style={styles.second}></View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   map: {
+    flex:1,
     height: '100%',
+    backgroundColor:'white'
   },
   bgcimage: {
-    width: '100%',
-    height: '100%'
+    flex:2,
+    position:'relative',
+    width: '90%',
+    height: '80%',
+    alignItems:'center',
+    justifyContent:'center',
+    left:'10%'
   },
   path: {
+    position:'absolute',
+    left:'50%',
+    top:'50%',
+    transform:[{translateX:-25},{translateY:-50}],
     flex: 1,
 
+  },
+  second:{
+    flex:1,
   }
 })
