@@ -31,13 +31,6 @@ const Tracker = () => {
       messageType: 'geometry_msgs/PoseStamped',
       throttle_rate: 500
     });
-    // listener.subscribe(function (message) {
-    //   console.log('Received message on ' + listener.name + ': ' + message.pose.position.x);
-    // });
-
-
-    // // //模拟数据
-    // const interval = setInterval(() => {
     listener.subscribe(function (message) {
       if (!!message) {
         const newData = { x: message.pose.position.x * 100, y: message.pose.position.y * 100 };
@@ -46,6 +39,10 @@ const Tracker = () => {
         console.log('更新后：', newData);
       }
     });
+    // // 模拟数据
+    // const interval = setInterval(() => {
+    //   const newData = { x: Math.random() * 100, y: Math.random() * 100 };
+    //   setData(oldData => [...oldData, newData]);
     // }, 1000);
 
     // return () => clearInterval(interval);

@@ -12,7 +12,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from './component/Home'
-import MapScreen from './component/Map'
 import VideoScreen from './component/Video'
 import TrackerScreen from './component/DroneTracker'
 
