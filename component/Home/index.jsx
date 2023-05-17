@@ -48,12 +48,12 @@ export default function Home({ navigation }) {
                 >
                     <Text style={{ fontSize: 20 }}>连接</Text>
                 </TouchableOpacity>
-                {/* <TouchableOpacity
+                <TouchableOpacity
                     style={styles.button}
                     onPress={goToVideo}
                 >
                     <Text style={{ fontSize: 20 }}>查看无人机成像</Text>
-                </TouchableOpacity> */}
+                </TouchableOpacity>
             </View>
         </View>
     )
